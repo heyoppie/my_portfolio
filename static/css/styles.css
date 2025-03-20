@@ -98,6 +98,7 @@ nav {
     gap: 20px;
     margin-left: auto;
     align-items: center;
+    transition: right 0.3s ease-in-out;
 }
 
 /* Navigation Links */
@@ -291,7 +292,7 @@ body.night-mode .hero {
 }
 
 .cta-button {
-    background: #333;
+    background: #33333357;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
@@ -301,16 +302,16 @@ body.night-mode .hero {
 }
 
 .cta-button:hover {
-    background: #555;
+    background: #555555a6;
     transform: scale(1.05);
 }
 
 body.night-mode .cta-button {
-    background: #555;
+    background: #55555579;
 }
 
 body.night-mode .cta-button:hover {
-    background: #777;
+    background: #77777770;
 }
 
 /* Projects Section */
@@ -440,18 +441,15 @@ body.night-mode .cta-button:hover {
 
 /* Footer Styles */
 footer {
-    background: rgba(255, 255, 255, 0); /* Semi-transparent white background */
-    color: #333; /* Dark text for light mode */
-    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0);
+    color: #333;
+    padding: 10px 0; /* Adjust padding as needed */
     text-align: center;
     position: fixed;
     width: 100%;
     bottom: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: auto; /* Allow footer to expand based on content */
-    z-index: 1000; /* Ensure footer is above other content */
+    z-index: 1000;
+    margin: 0; /* Ensure no margin is applied */
 }
 
 body.night-mode footer {
@@ -465,15 +463,17 @@ body.night-mode footer {
     align-items: center;
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    margin: 0 auto; /* Center the content */
+    padding: 0; /* Remove padding */
 }
+
 
 .footer-left, .footer-middle, .footer-right {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .footer-left {
@@ -517,38 +517,23 @@ body.night-mode footer {
 }
 
 /* Mobile View Adjustments */
-@media (max-width: 768px) {
-    footer {
-        height: auto; /* Allow footer to expand based on content */
-        padding: 15px 10px; /* Adjust padding for mobile */
-    }
+@media (max-width: 768px) 
+{
 
     .footer-content {
-        flex-direction: row; /* Keep content in a row */
-        gap: 10px; /* Add spacing between sections */
+        flex-direction: row; /* Stack sections vertically */
+        gap: 10px; /* Add space between stacked sections */
     }
 
-    .footer-left {
-        justify-content: flex-start; /* Align copyright to the left */
-        text-align: left;
-        flex: 1; /* Allow copyright to take up space */
-    }
-
-    .footer-middle {
-        justify-content: center; /* Align support link to the center */
-        text-align: center;
-        flex: 1; /* Allow support link to take up space */
-    }
-
-    .footer-right {
-        justify-content: flex-end; /* Align social icons to the right */
-        text-align: right;
-        flex: 1; /* Allow social icons to take up space */
+    .footer-left, .footer-middle, .footer-right {
+        justify-content: center; /* Center content on mobile */
+        margin: 0; /* Remove margins on mobile */
     }
 
     .social-icons {
-        gap: 10px; /* Reduce spacing between icons */
+        gap: 10px; /* Reduce space between icons on mobile */
     }
+
 
     .social-icons a {
         font-size: 1.2rem; /* Smaller icons for mobile */
