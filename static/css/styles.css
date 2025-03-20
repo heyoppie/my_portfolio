@@ -6,9 +6,10 @@ body {
     line-height: 1.6;
     transition: background-color 0.3s, color 0.3s;
     background-image: url('../images/background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-size: cover; /* Ensure the image covers the entire viewport */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Fix the background while scrolling */
+    min-height: 100vh; /* Ensure the body covers the full viewport height */
     position: relative;
     overflow-x: hidden; /* Prevent horizontal overflow */
 }
