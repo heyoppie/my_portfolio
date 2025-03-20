@@ -507,25 +507,23 @@ body.night-mode footer {
     }
 
     .footer-content {
-        flex-direction: column; /* Stack content vertically */
+        flex-direction: row; /* Keep content in a row */
         gap: 10px; /* Add spacing between sections */
     }
 
-    .footer-left, .footer-middle, .footer-right {
-        justify-content: center; /* Center-align all sections */
-        text-align: center; /* Center-align text */
-    }
-
     .footer-left {
-        order: 1; /* Move copyright to the top */
+        justify-content: flex-start; /* Align copyright to the left */
+        text-align: left;
     }
 
     .footer-middle {
-        order: 2; /* Move support link to the middle */
+        justify-content: center; /* Align support link to the center */
+        text-align: center;
     }
 
     .footer-right {
-        order: 3; /* Move social icons to the bottom */
+        justify-content: flex-end; /* Align social icons to the right */
+        text-align: right;
     }
 
     .social-icons {
