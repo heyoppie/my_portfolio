@@ -46,12 +46,18 @@ body.night-mode {
     color: #fff;
 }
 
-/* Header and Navigation */
+/* Header Styles */
 header {
-    background: transparent;
+    background: rgba(255, 255, 255, 0); /* Semi-transparent white background */
     padding: 1rem 0;
-    position: relative;
-    z-index: 1;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure header is above other content */
+}
+
+body.night-mode header {
+    background: rgba(0, 0, 0, 0); /* Semi-transparent black background for night mode */
 }
 
 nav {
@@ -63,10 +69,16 @@ nav {
     padding: 0 20px;
 }
 
+/* Logo */
 .logo {
     display: flex;
     align-items: center;
     gap: 10px;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.05); /* Slight scale effect on hover */
 }
 
 .logo-img {
@@ -88,16 +100,39 @@ nav {
     align-items: center;
 }
 
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-left: auto;
+    align-items: center;
+}
+
 .nav-links li a {
     color: inherit;
     text-decoration: none;
-    transition: color 0.3s;
+    font-weight: 500; /* Slightly bolder text */
+    transition: color 0.3s, transform 0.3s;
 }
 
 .nav-links li a:hover {
-    color: #ff6347;
+    color: #ff6347; /* Hover color */
+    transform: translateY(-2px); /* Slight lift on hover */
 }
 
+#theme-toggle {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 20px;
+    padding: 5px;
+    transition: transform 0.3s;
+}
+
+/* Night Mode Toggle */
 #theme-toggle {
     background: none;
     border: none;
@@ -113,6 +148,7 @@ nav {
     transform: scale(1.1);
 }
 
+/* Hamburger Menu (Mobile) */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -144,7 +180,7 @@ body.night-mode .bar {
         text-align: center;
         transition: right 0.3s ease-in-out;
         padding: 0;
-        margin: 0;
+        margin: 0; 
     }
 
     body.night-mode .nav-links {
@@ -385,9 +421,8 @@ body.night-mode .cta-button:hover {
     background: #0056b3;
 }
 
-/* Footer Styles */
 footer {
-    background: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    background: rgba(255, 255, 255, 0); /* Semi-transparent white background */
     color: #333; /* Dark text for light mode */
     padding: 10px 20px;
     text-align: center;
@@ -398,12 +433,11 @@ footer {
     justify-content: space-between;
     align-items: center;
     height: 50px;
-    z-index: 1;
-    backdrop-filter: blur(8px); /* Match the blur effect of the header */
+    z-index: 1000; /* Ensure footer is above other content */
 }
 
 body.night-mode footer {
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for night mode */
+    background: rgba(0, 0, 0, 0); /* Semi-transparent black background for night mode */
     color: #ffffffa6; /* Light text for night mode */
 }
 
