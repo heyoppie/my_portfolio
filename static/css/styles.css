@@ -421,6 +421,7 @@ body.night-mode .cta-button:hover {
     background: #0056b3;
 }
 
+/* Footer Styles */
 footer {
     background: rgba(255, 255, 255, 0); /* Semi-transparent white background */
     color: #333; /* Dark text for light mode */
@@ -432,7 +433,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 50px;
+    height: auto; /* Allow footer to expand based on content */
     z-index: 1000; /* Ensure footer is above other content */
 }
 
@@ -498,46 +499,40 @@ body.night-mode footer {
     transform: translateY(-3px);
 }
 
-/* Mobile View Adjustments for Social Icons */
+/* Mobile View Adjustments */
 @media (max-width: 768px) {
+    footer {
+        height: auto; /* Allow footer to expand based on content */
+        padding: 15px 10px; /* Adjust padding for mobile */
+    }
+
+    .footer-content {
+        flex-direction: column; /* Stack content vertically */
+        gap: 10px; /* Add spacing between sections */
+    }
+
+    .footer-left, .footer-middle, .footer-right {
+        justify-content: center; /* Center-align all sections */
+        text-align: center; /* Center-align text */
+    }
+
+    .footer-left {
+        order: 1; /* Move copyright to the top */
+    }
+
+    .footer-middle {
+        order: 2; /* Move support link to the middle */
+    }
+
+    .footer-right {
+        order: 3; /* Move social icons to the bottom */
+    }
+
     .social-icons {
-        gap: 10px;
+        gap: 10px; /* Reduce spacing between icons */
     }
 
     .social-icons a {
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .social-icons {
-        gap: 8px;
-    }
-
-    .social-icons a {
-        font-size: 1rem;
-    }
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
+        font-size: 1.2rem; /* Smaller icons for mobile */
     }
 }
