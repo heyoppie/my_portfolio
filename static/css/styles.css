@@ -229,6 +229,12 @@ body.night-mode .bar {
     }
 }
 
+@media (max-width: 768px) {
+    body {
+        overflow: hidden;
+    }
+}
+
 /* Main Content */
 main {
     margin-left: 0;
