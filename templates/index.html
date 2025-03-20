@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+    <!-- Round Profile Picture -->
+    <div class="profile-picture">
+        <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Oppie's Profile Picture">
+    </div>
+    <p>Hi, I'm Oppie! I'm a passionate developer who loves building amazing projects.</p>
+    <a href="{{ url_for('about') }}" class="cta-button">Learn More</a>
+</section>
+{% endblock %}

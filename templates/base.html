@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to my portfolio! Explore my projects, learn about me, and get in touch.">
+    <title>Oppie</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- Updated Logo Section -->
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Oppie's Logo" class="logo-img">
+                <span class="logo-text">Oppie's Portfolio</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('projects') }}">Projects</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        </nav>
+    </header>
+
+    <main role="main">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Modern Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>&copy; 2025 Oppie</p>
+            </div>
+            <div class="footer-middle">
+                <a href="#" class="support-me">Support Me</a>
+            </div>
+            <div class="footer-right">
+                <div class="social-icons">
+                    <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
