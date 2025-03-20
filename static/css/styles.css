@@ -169,6 +169,10 @@ body.night-mode .bar {
 
 /* Responsive Navbar */
 @media (max-width: 768px) {
+    nav {
+        justify-content: space-between;
+    }
+
     .nav-links {
         position: fixed;
         top: 60px;
@@ -195,8 +199,21 @@ body.night-mode .bar {
         margin: 15px 0;
     }
 
+    .nav-controls {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
     .hamburger {
         display: flex;
+        order: 2; /* Move hamburger to the right */
+    }
+
+    #theme-toggle {
+        margin: 0;
+        font-size: 1.2rem; /* Smaller icon for mobile */
+        order: 1; /* Move theme toggle to the left of hamburger */
     }
 
     .hamburger.active .bar:nth-child(1) {
@@ -209,12 +226,6 @@ body.night-mode .bar {
 
     .hamburger.active .bar:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
-    }
-
-    #theme-toggle {
-        margin-left: 0;
-        margin-top: 10px;
-        font-size: 1.2rem; /* Smaller icon for mobile */
     }
 }
 
@@ -423,7 +434,7 @@ body.night-mode .cta-button:hover {
 
 /* Footer Styles */
 footer {
-    background: rgba(255, 255, 255, 0); /* Semi-transparent white background */
+    background: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
     color: #333; /* Dark text for light mode */
     padding: 10px 20px;
     text-align: center;
@@ -514,16 +525,19 @@ body.night-mode footer {
     .footer-left {
         justify-content: flex-start; /* Align copyright to the left */
         text-align: left;
+        flex: 1; /* Allow copyright to take up space */
     }
 
     .footer-middle {
         justify-content: center; /* Align support link to the center */
         text-align: center;
+        flex: 1; /* Allow support link to take up space */
     }
 
     .footer-right {
         justify-content: flex-end; /* Align social icons to the right */
         text-align: right;
+        flex: 1; /* Allow social icons to take up space */
     }
 
     .social-icons {

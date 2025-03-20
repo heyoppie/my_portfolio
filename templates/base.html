@@ -16,7 +16,7 @@
         <nav>
             <div class="logo">
                 <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Oppie's Logo" class="logo-img">
-                <span class="logo-text">Oppie's Portfolio</span>
+                <span class="logo-text">Oppie</span>
             </div>
             <ul class="nav-links">
                 <li><a href="{{ url_for('home') }}">Home</a></li>
@@ -24,12 +24,13 @@
                 <li><a href="{{ url_for('projects') }}">Projects</a></li>
                 <li><a href="{{ url_for('contact') }}">Contact</a></li>
             </ul>
+            <div class="nav-controls">
+            <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
             <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
-            <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
         </nav>
     </header>
 
