@@ -73,8 +73,9 @@ nav {
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
-    transition: transform 0.3s;
+    gap: 0; /* Adjust gap as needed */
+    transition: transform 0.3s ease; /* Smooth transition */
+    will-change: transform; /* Optimize rendering */
 }
 
 .logo:hover {
@@ -84,12 +85,14 @@ nav {
 .logo-img {
     height: 40px;
     width: auto;
+    display: block; /* Ensure proper rendering */
 }
 
 .logo-text {
     font-size: 1.5rem;
     font-weight: bold;
     color: inherit;
+    transition: color 0.3s ease; /* Smooth text color transition */
 }
 
 .nav-links {
