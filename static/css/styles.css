@@ -453,7 +453,7 @@ body.night-mode .project-links a:hover {
 
 .skill-card i {
     font-size: 2rem;
-    color: #007BFF;
+    color: #ff6347;
     margin-bottom: 1rem;
 }
 
@@ -492,7 +492,7 @@ body.night-mode .project-links a:hover {
     left: 50%;
     width: 2px;
     height: 100%;
-    background: #007BFF;
+    background: #ff6347;
     transform: translateX(-50%);
 }
 
@@ -626,9 +626,9 @@ body.night-mode .cta-button:hover {
 
 /* Footer Styles */
 footer {
-    background: rgba(255, 255, 255, 0);
+    background: rgba(255, 255, 255, 0.5);
     color: #333;
-    padding: 10px 0; /* Adjust padding as needed */
+    padding: 1px 0; /* Adjust padding as needed */
     text-align: center;
     position: fixed;
     width: 100%;
@@ -638,7 +638,7 @@ footer {
 }
 
 body.night-mode footer {
-    background: rgba(0, 0, 0, 0); /* Semi-transparent black background for night mode */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for night mode */
     color: #ffffffa6; /* Light text for night mode */
 }
 
@@ -745,4 +745,18 @@ body.night-mode footer {
         bottom: 10px !important; /* Adjust for mobile */
         right: 10px !important;
     }
-}   
+}
+
+@media (max-width: 768px) {
+    .about {
+        overflow-y: auto;
+        height: 60vh; /* Add a fixed height */
+    }
+
+    /* Check for conflicting styles */
+    .about-container,
+    .about-intro,
+    .about-intro p {
+        overflow: initial;
+    }
+}
