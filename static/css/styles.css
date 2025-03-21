@@ -542,3 +542,25 @@ body.night-mode footer {
         font-size: 1.2rem; /* Smaller icons for mobile */
     }
 }
+
+/* Custom Buy Me a Coffee Widget */
+.bmc-btn-container {
+    z-index: 9999; /* Ensure it's above other elements */
+}
+
+.bmc-btn {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.bmc-btn:hover {
+    transform: scale(1.1); /* Slight hover effect */
+    opacity: 0.9;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .bmc-btn-container {
+        bottom: 10px !important; /* Adjust for mobile */
+        right: 10px !important;
+    }
+}
