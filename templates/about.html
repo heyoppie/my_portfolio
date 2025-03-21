@@ -1,8 +1,66 @@
 {% extends "base.html" %}
 
+{% block title %}About | Oppie{% endblock %}
+
 {% block content %}
 <section class="about">
-    <h1>About Me</h1>
-    <p>I am a software developer with expertise in Python, Flask, and web development.</p>
+    <div class="about-container">
+        <!-- Introduction -->
+        <div class="about-intro">
+            <h1>Hi, I'm Oppie! 👋</h1>
+            <p class="tagline">A passionate developer who loves turning ideas into reality.</p>
+            <p class="bio">
+                I'm a self-taught developer with a knack for building clean, user-friendly web applications. 
+                My journey started with a curiosity for how things work, and now I'm dedicated to creating 
+                solutions that make a difference. When I'm not coding, you'll find me exploring new tech, 
+                gaming, or sipping on a cup of coffee ☕.
+            </p>
+        </div>
+
+        <!-- Skills -->
+        <div class="skills-section">
+            <h2>What I Do</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Web Development</h3>
+                    <p>Building responsive and dynamic websites using modern technologies.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>UI/UX Design</h3>
+                    <p>Designing intuitive and visually appealing user interfaces.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Problem Solving</h3>
+                    <p>Breaking down complex problems into simple, elegant solutions.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="experience-section">
+            <h2>My Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Freelance Developer</h3>
+                    <p class="timeline-date">2022 - Present</p>
+                    <p>Working on diverse projects, from small business websites to custom web applications.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Self-Taught Programmer</h3>
+                    <p class="timeline-date">2020 - 2022</p>
+                    <p>Learned programming through online courses, tutorials, and building personal projects.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta-section">
+            <p>Want to work together or just say hi? Let's connect!</p>
+            <a href="{{ url_for('contact') }}" class="cta-button">Get in Touch</a>
+        </div>
+    </div>
 </section>
 {% endblock %}
