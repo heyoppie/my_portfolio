@@ -561,7 +561,7 @@ body.night-mode footer {
 @media (max-width: 768px) {
     .bmc-btn-container {
         bottom: 70px !important; /* Move it up from the bottom */
-        right: 10px !important;  /* Keep it on the right */
+        right: 50px !important;  /* Keep it on the right */
     }
 
     .bmc-btn {
