@@ -626,7 +626,7 @@ body.night-mode .cta-button:hover {
 
 /* Footer Styles */
 footer {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0);
     color: #333;
     padding: 1px 0; /* Adjust padding as needed */
     text-align: center;
@@ -638,7 +638,7 @@ footer {
 }
 
 body.night-mode footer {
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for night mode */
+    background: rgba(0, 0, 0, 0); /* Semi-transparent black background for night mode */
     color: #ffffffa6; /* Light text for night mode */
 }
 
