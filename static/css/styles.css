@@ -572,6 +572,10 @@ body.night-mode .timeline-item h3 {
     color: #fff;
 }
 
+body.night-mode .about-intro .bio {
+    background: #1e1e1e79;
+}
+
 body.night-mode .about-intro .tagline,
 body.night-mode .about-intro .bio,
 body.night-mode .skill-card p,
@@ -581,7 +585,6 @@ body.night-mode .cta-section p {
 }
 
 body.night-mode .skill-card,
-body.night-mode .about-intro .bio,
 body.night-mode .timeline-item {
     background: #1e1e1e;
     border-color: #333;
