@@ -560,12 +560,7 @@ body.night-mode footer {
 /* Mobile adjustments */
 @media (max-width: 768px) {
     .bmc-btn-container {
-        bottom: 70px !important; /* Move it up from the bottom */
-        right: 50px !important;  /* Keep it on the right */
+        bottom: 10px !important; /* Adjust for mobile */
+        right: 10px !important;
     }
-
-    .bmc-btn {
-        width: 60px !important;  /* Smaller button for mobile */
-        height: 60px !important;
-    }
-}
+}   
