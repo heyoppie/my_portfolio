@@ -759,7 +759,7 @@ body.night-mode footer {
 @media (max-width: 768px) {
     .about {
         overflow-y: auto;
-        height: 60vh; /* Add a fixed height */
+        height: 100vh; /* Add a fixed height */
     }
 
     /* Check for conflicting styles */
