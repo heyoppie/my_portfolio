@@ -559,6 +559,7 @@ body.night-mode .project-links a:hover {
 }
 
 /* Night Mode Styles */
+
 body.night-mode .about {
     background: #12121200;
 }
@@ -580,6 +581,7 @@ body.night-mode .cta-section p {
 }
 
 body.night-mode .skill-card,
+body.night-mode .about-intro .bio,
 body.night-mode .timeline-item {
     background: #1e1e1e;
     border-color: #333;
