@@ -25,10 +25,10 @@
                 <span class="logo-text">Oppie</span>
             </div>
             <ul class="nav-links">
-                <li><a href="{{ url_for('home') }}">Home</a></li>
-                <li><a href="{{ url_for('projects') }}">Projects</a></li>
-                <li><a href="{{ url_for('contact') }}">Contact</a></li>
-                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('home') }}" class="{{ 'active' if request.endpoint == 'home' else '' }}">Home</a></li>
+                <li><a href="{{ url_for('projects') }}" class="{{ 'active' if request.endpoint == 'projects' else '' }}">Projects</a></li>
+                <li><a href="{{ url_for('contact') }}" class="{{ 'active' if request.endpoint == 'contact' else '' }}">Contact</a></li>
+                <li><a href="{{ url_for('about') }}" class="{{ 'active' if request.endpoint == 'about' else '' }}">About</a></li>
             </ul>
             <div class="nav-controls">
             <button id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false" title="Toggle Dark Mode">🌙</button>
@@ -71,7 +71,7 @@
         data-id="heyoppie" 
         data-description="Support me on Buy me a coffee!" 
         data-message="Support me!" 
-        data-color="#BD5FFF" 
+        data-color="#ff6347" 
         data-position="Right" 
         data-x_margin="20" 
         data-y_margin="55"

@@ -95,6 +95,7 @@ nav {
     transition: color 0.3s ease; /* Smooth text color transition */
 }
 
+/* Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
@@ -104,19 +105,11 @@ nav {
     transition: right 0.3s ease-in-out;
 }
 
-/* Navigation Links */
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin-left: auto;
-    align-items: center;
-}
-
 .nav-links li a {
+    font-weight: bold;
     color: inherit;
     text-decoration: none;
-    font-weight: 500; /* Slightly bolder text */
+    font-weight: bold; /* Slightly bolder text */
     transition: color 0.3s, transform 0.3s;
 }
 
